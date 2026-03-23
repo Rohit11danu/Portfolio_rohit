@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Singh Danu | Portfolio</title>
+    <meta name="description" content="Computer Science Engineering Student, Developer, and Problem Solver. Explore my projects and skills in Java, Python, and Machine Learning.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <canvas id="starfieldCanvas"></canvas>
+    <canvas id="warpCanvas"></canvas>
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">RD<span class="dot">.</span></span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#journey" class="nav-link">Journey</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link nav-cta mission-control">Mission Control</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Social Links Floating -->
+    <div class="floating-socials">
+        <a href="https://github.com/Rohit11danu" target="_blank" class="social-icon probe-icon" aria-label="GitHub"><i class="fab fa-github"></i><span class="probe-antenna"></span></a>
+        <a href="https://linkedin.com/in/" target="_blank" class="social-icon probe-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="probe-antenna"></span></a>
+        <a href="mailto:rohitsinghdanu1122@gmail.com" class="social-icon probe-icon" aria-label="Email"><i class="fas fa-envelope"></i><span class="probe-antenna"></span></a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-hud-grid"></div>
+            <div class="floating-particles" id="heroParticles"></div>
+            
+            <div class="container hero-content">
+                <div class="hero-text" data-speed="2">
+                    <div class="mission-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Mission Log: Active</span>
+                        <span class="scan-line-mini"></span>
+                    </div>
+                    
+                    <h1 class="hero-title">Hi, I'm <br><span class="glow-text gradient-name">Rohit Singh Danu</span></h1>
+                    <h2 class="hero-subtitle">
+                        <span class="role-prefix">System Role // </span>
+                        <span class="type-effect"></span><span class="cursor-blink">|</span>
+                    </h2>
+                    
+                    <p class="hero-desc">Building practical computing solutions and exploring intelligent algorithms across the digital universe.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary launch-btn">
+                            <span class="btn-text">Explore My Work</span>
+                            <span class="btn-icon-wrapper"><i class="fas fa-rocket btn-icon"></i></span>
+                        </a>
+                        <a href="https://pdflink.to/140ffc3b/" target="_blank" class="btn btn-outline download-btn" download>
+                            <span class="btn-text">Deploy CV</span>
+                            <i class="fas fa-satellite-dish btn-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual" data-speed="-2">
+                    <div class="planet-container">
+                        <div class="planet-glow-backdrop"></div>
+                        <div class="planet">
+                            <div class="planet-texture"></div>
+                            <div class="planet-atmosphere"></div>
+                            <div class="planet-shadow"></div>
+                        </div>
+                        <div class="planet-ring-front"></div>
+                        <div class="planet-ring-back"></div>
+                        
+                        <div class="floating-data node-1">
+                            <i class="fas fa-crosshairs"></i> SYNC_OPT
+                        </div>
+                        <div class="floating-data node-2">
+                            <div class="mini-graph">
+                                <span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        
+                        <div class="moon orbit-1"></div>
+                        <div class="moon orbit-2"></div>
+                        <div class="moon orbit-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="terminal-quote hero-quote" data-aos="fade-up">
+                    <span class="quote-prefix">> </span>
+                    "The best way to predict the future is to invent it." — Alan Kay
+                </div>
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding nebula-bg-deep">
+            <div class="scan-line"></div>
+            <div class="floating-particles" id="aboutParticles"></div>
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">01. <span class="hologram-text accent-cyan" data-text="Commander's Log">Commander's Log</span></h2>
+                    <p class="section-subtitle">Stellar Identity Profile</p>
+                    <div class="terminal-quote header-quote" data-aos="fade-up">
+                        <span class="quote-prefix">> </span>
+                        "Talk is cheap. Show me the code." — Linus Torvalds
+                    </div>
+                </div>
+                
+                <div class="stellar-profile">
+                    <!-- Left Avatar Segment -->
+                    <div class="profile-avatar-container reveal-left">
+                        <div class="avatar-glow-pulse"></div>
+                        <div class="orbital-ring ring-outer"></div>
+                        <div class="orbital-ring ring-inner">
+                            <div class="orbiting-dot"></div>
+                        </div>
+                        <div class="tech-markings">
+                            <span class="mark-1">SYS_ON</span>
+                            <span class="mark-2">RADAR_ACTIVE</span>
+                            <div class="tech-crosshair"></div>
+                        </div>
+                        <div class="avatar-frame">
+                            <div class="avatar-core">
+                                <div class="avatar-img-wrapper">
+                                    <i class="fas fa-user-astronaut cosmic-icon-hero"></i>
+                                </div>
+                                <div class="scan-line-horizontal"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Bio Segment -->
+                    <div class="about-text glass-card command-console reveal-right">
+                        <div class="corner-bracket top-left"></div>
+                        <div class="corner-bracket top-right"></div>
+                        <div class="corner-bracket bottom-left"></div>
+                        <div class="corner-bracket bottom-right"></div>
+                        
+                        <div class="console-header badge-layout">
+                            <div class="badge-item"><i class="fas fa-id-card"></i> ID: RD-1122</div>
+                            <div class="badge-item status-active"><span class="pulse-dot"></span> ON_MISSION</div>
+                            <div class="badge-item"><i class="fas fa-map-marker-alt"></i> EARTH_BASE</div>
+                        </div>
+                        
+                        <div class="profile-bio console-log" id="profileBio">
+                            <p class="typing-placeholder">Establishing secure link... Retrieving mission data...</p>
+                        </div>
+                        
+                        <div class="about-stats-container mt-4">
+                            <div class="telemetry-grid">
+                                <!-- Telemetry Card 1 -->
+                                <div class="data-card glass-card reveal-up">
+                                    <div class="corner-bracket-mini top-left"></div>
+                                    <div class="card-inner-glow"></div>
+                                    <div class="data-header">
+                                        <i class="fas fa-microchip"></i>
+                                        <span>LOGIC CORE</span>
+                                    </div>
+                                    <div class="data-value">Java / Python</div>
+                                    <div class="data-sub">Primary Syntax</div>
+                                </div>
+                                
+                                <!-- Telemetry Card 2 -->
+                                <div class="data-card glass-card reveal-up" style="transition-delay: 0.1s;">
+                                    <div class="corner-bracket-mini bottom-right"></div>
+                                    <div class="card-inner-glow"></div>
+                                    <div class="data-header">
+                                        <i class="fas fa-brain"></i>
+                                        <span>CREATIVE SYNC</span>
+                                    </div>
+                                    <div class="data-value">AI / ML</div>
+                                    <div class="data-sub">Neural Protocols</div>
+                                </div>
+                                
+                                <!-- Telemetry Card 3 -->
+                                <div class="data-card glass-card reveal-up" style="transition-delay: 0.2s;">
+                                    <div class="corner-bracket-mini top-right"></div>
+                                    <div class="card-inner-glow"></div>
+                                    <div class="data-header">
+                                        <i class="fas fa-bullseye"></i>
+                                        <span>MISSION FOCUS</span>
+                                    </div>
+                                    <div class="data-value">Problem Solving</div>
+                                    <div class="data-sub">Algorithm Opt</div>
+                                </div>
+                                
+                                <!-- Telemetry Card 4 -->
+                                <div class="data-card glass-card reveal-up" style="transition-delay: 0.3s;">
+                                    <div class="corner-bracket-mini bottom-left"></div>
+                                    <div class="card-inner-glow"></div>
+                                    <div class="data-header">
+                                        <i class="fas fa-clock"></i>
+                                        <span>SYS_UPTIME</span>
+                                    </div>
+                                    <div class="data-value" id="uptimeCounter">0h 0m</div>
+                                    <div class="data-sub">Continuity Check</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="radar-sweep"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rocket-warp-container" data-target="#skills">
+                <div class="rocket-warp">
+                    <div class="rocket-body"><i class="fas fa-rocket"></i></div>
+                    <div class="rocket-flame"></div>
+                </div>
+                <span class="warp-label">Next Sector: Tech Constellation</span>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section-padding nebula-bg-2">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">02. <span class="pulsate-glow" data-text="Tech Constellation">Tech Constellation</span></h2>
+                    <p class="section-subtitle">STARRY SKILLS MAP</p>
+                    <div class="terminal-quote header-quote" style="text-align: center;" data-aos="fade-up">
+                        <span class="quote-prefix">> </span>
+                        "First, solve the problem. Then, write the code." — John Johnson
+                    </div>
+                </div>
+
+                <div class="skills-layout-wrapper">
+                    <div class="galactic-network" id="galacticNetwork">
+                        <!-- Network Map -->
+                        <div class="network-map">
+                            <!-- Cluster 1: Languages -->
+                            <div class="skill-cluster cluster-logic" data-category="languages">
+                                <div class="cluster-core" data-core="Languages">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="cluster-orbit">
+                                    <div class="skill-satellite sat-1" data-skill="Java" data-category="Programming" data-prof="90" data-desc="Enterprise-grade backend systems and OOP architecture."><i class="fab fa-java"></i> Java</div>
+                                    <div class="skill-satellite sat-2" data-skill="Python" data-category="Programming" data-prof="88" data-desc="Data processing, automation, and machine learning models."><i class="fab fa-python"></i> Python</div>
+                                    <div class="skill-satellite sat-3" data-skill="C++" data-category="Programming" data-prof="82" data-desc="High-performance computing and algorithm optimization.">C++</div>
+                                    <div class="skill-satellite sat-4" data-skill="HTML" data-category="Web Core" data-prof="95" data-desc="The backbone of web structure and semantic markup."><i class="fab fa-html5"></i> HTML</div>
+                                </div>
+                            </div>
+
+                            <!-- Cluster 2: Libraries -->
+                            <div class="skill-cluster cluster-web" data-category="libraries">
+                                <div class="cluster-core" data-core="Libraries">
+                                    <i class="fas fa-book-reader"></i>
+                                </div>
+                                <div class="cluster-orbit">
+                                    <div class="skill-satellite sat-1" data-skill="Pandas" data-category="Data Analysis" data-prof="85" data-desc="Powerful data manipulation and analysis library for Python."><i class="fas fa-table"></i> Pandas</div>
+                                    <div class="skill-satellite sat-2" data-skill="NumPy" data-category="Computation" data-prof="88" data-desc="Fundamental package for scientific computing with Python."><i class="fas fa-calculator"></i> NumPy</div>
+                                    <div class="skill-satellite sat-3" data-skill="Matplotlib" data-category="Visualization" data-prof="80" data-desc="Comprehensive library for creating static, animated, and interactive visualizations."><i class="fas fa-chart-line"></i> Matplotlib</div>
+                                    <div class="skill-satellite sat-4" data-skill="Seaborn" data-category="Visualization" data-prof="82" data-desc="Statistical data visualization based on Matplotlib."><i class="fas fa-chart-area"></i> Seaborn</div>
+                                </div>
+                            </div>
+
+                            <!-- Cluster 3: Tools -->
+                            <div class="skill-cluster cluster-tools" data-category="tools">
+                                <div class="cluster-core" data-core="Tools">
+                                    <i class="fas fa-toolbox"></i>
+                                </div>
+                                <div class="cluster-orbit">
+                                    <div class="skill-satellite sat-1" data-skill="Excel" data-category="Data Management" data-prof="85" data-desc="Advanced data organization, formulas, and pivot tables."><i class="fas fa-file-excel"></i> Excel</div>
+                                    <div class="skill-satellite sat-2" data-skill="Tableau" data-category="BI Tool" data-prof="75" data-desc="Powerful business intelligence and data visualization platform."><i class="fas fa-desktop"></i> Tableau</div>
+                                    <div class="skill-satellite sat-3" data-skill="MySQL" data-category="Database" data-prof="85" data-desc="Relational data architecture and complex query optimization."><i class="fas fa-database"></i> MySQL</div>
+                                    <div class="skill-satellite sat-4" data-skill="PowerPoint" data-category="Presentation" data-prof="80" data-desc="Professional communication and project presentation."><i class="fas fa-file-powerpoint"></i> PPT</div>
+                                </div>
+                            </div>
+
+                            <!-- Cluster 4: Core CS -->
+                            <div class="skill-cluster cluster-neural" data-category="core">
+                                <div class="cluster-core" data-core="Core CS">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="cluster-orbit orbit-small">
+                                    <div class="skill-satellite sat-1" data-skill="DSA" data-category="Foundation" data-prof="90" data-desc="Advanced data structures and algorithmic problem-solving."><i class="fas fa-brain"></i> DSA</div>
+                                    <div class="skill-satellite sat-2" data-skill="Logic" data-category="Soft Skill" data-prof="92" data-desc="Analytical thinking and structured problem-solving."><i class="fas fa-lightbulb"></i> Logic</div>
+                                    <div class="skill-satellite sat-3" data-skill="Adaptability" data-category="Soft Skill" data-prof="95" data-desc="Quick learning and flexibility in dynamic environments."><i class="fas fa-sync"></i> Adapt</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Scanner HUD -->
+                    <div class="system-scanner-sidebar">
+                        <div class="system-scanner-panel glass-card">
+                            <div class="scanner-header">
+                                <i class="fas fa-satellite-dish"></i> <span>SYSTEM SCANNER</span>
+                            </div>
+                            <div class="scanner-body">
+                                <h4 id="scanTitle" class="glitch-text" data-text="Awaiting Input...">Awaiting Input...</h4>
+                                <p id="scanCategory" class="scan-subtitle">Hover over a node to analyze</p>
+                                <div class="proficiency-tracker">
+                                    <span class="tracker-label">Power Level</span>
+                                    <div class="tracker-bar"><div class="tracker-fill" id="scanProficiency" style="width: 0%;"></div></div>
+                                </div>
+                                <p id="scanDesc" class="scan-desc">Sector telemetry offline. Please select a celestial body for data synthesis.</p>
+                                
+                                <div class="scanner-actions">
+                                    <button class="btn-scan-action" id="viewAllNetwork">
+                                        <i class="fas fa-project-diagram"></i> FULL SYNC
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cosmic Popup Modal -->
+                <div id="skillOverlay" class="popup-overlay"></div>
+                <div id="skillPopup" class="cosmic-popup">
+                    <button class="popup-close" id="closeSkillPopup">&times;</button>
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <h2 id="popTitle" class="glitch-text" data-text="DATA ANALYST">DATA ANALYST</h2>
+                            <span id="popTag" class="popup-tag">[ SYSTEM LOG ]</span>
+                        </div>
+                        <div class="popup-body">
+                            <p id="popDesc">Initializing sector analysis...</p>
+                            <div class="popup-status">> SYNC STATUS: OPTIMAL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rocket-warp-container" data-target="#projects">
+                <div class="rocket-warp">
+                    <div class="rocket-body"><i class="fas fa-rocket"></i></div>
+                    <div class="rocket-flame"></div>
+                </div>
+                <span class="warp-label">Engage Warp to Projects Galaxy</span>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-padding nebula-bg-1">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">03. <span class="hologram-text" data-text="Projects Galaxy">Projects Galaxy</span></h2>
+                    <p class="section-subtitle">Featured Missions</p>
+                </div>
+
+                <div class="project-filters reveal-fade">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="dev">Software Dev</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card reveal-up project-item" data-category="dev">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://liberary-book-tracker.onrender.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Rohit11danu/Liberary_Book_Tracker" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #1A1A2E, #16213E);">
+                                <i class="fas fa-book cosmic-icon-large"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Library Book Tracker</h3>
+                            <p class="project-desc">Java and DSA based system to manage books, search by title/author, and track availability with efficient array-based operations.</p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>DSA</span>
+                                <span>OOP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card reveal-up project-item" data-category="ai" style="transition-delay: 0.1s;">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Rahul99699/A-Unified-Multi-Source-Plant-Health-Vision-System-for-Cross-Crop-Disease-Detection-and-Early-Diagnos" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Rahul99699/A-Unified-Multi-Source-Plant-Health-Vision-System-for-Cross-Crop-Disease-Detection-and-Early-Diagnos" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+                                <i class="fas fa-leaf cosmic-icon-large"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Plant Disease Detection</h3>
+                            <p class="project-desc">Deep learning project using TensorFlow for early disease detection from leaf images to assist farmers with rapid diagnostics.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>NumPy</span>
+                                <span>Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card reveal-up project-item" data-category="ai" style="transition-delay: 0.2s;">
+                        <div class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://particle-swarm-optimization-for-image-hcsi.onrender.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Rohit11danu/Particle-Swarm-Optimization-for-Image-Registration-" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #302b63, #24243e);">
+                                <i class="fas fa-microscope cosmic-icon-large"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">PSO Image Registration</h3>
+                            <p class="project-desc">Research-oriented image registration system using Particle Swarm Optimization (PSO) for high-accuracy image alignment.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>Optimization Algorithm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rocket-warp-container" data-target="#journey">
+                <div class="rocket-warp">
+                    <div class="rocket-body"><i class="fas fa-rocket"></i></div>
+                    <div class="rocket-flame"></div>
+                </div>
+                <span class="warp-label">Jump to Mission Timeline</span>
+            </div>
+        </section>
+
+        <!-- Education & Journey Section -->
+        <section id="journey" class="journey section-padding">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">04. <span class="hologram-text" data-text="Mission Timeline">Mission Timeline</span></h2>
+                    <p class="section-subtitle">Education & Experience</p>
+                </div>
+
+                <div class="trajectory-container">
+                    <div class="orbital-path">
+                        <div class="path-progress" id="pathProgress"></div>
+                    </div>
+
+                    <!-- Milestone 1 -->
+                    <div class="trajectory-node reveal-up">
+                        <div class="node-marker">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="node-content-wrapper">
+                            <div class="node-card glass-card">
+                                <div class="trajectory-date">2023 - 2027</div>
+                                <h3 class="trajectory-degree">B.Tech in Computer Science Engineering</h3>
+                                <h4 class="trajectory-inst">Lovely Professional University, Punjab</h4>
+                                <p>Current CGPA: <span class="glow-text">7.56</span></p>
+                                <p>Focusing on advanced algorithms, data structures, and intelligent systems.</p>
+                            </div>
+                            <div class="telemetry-panel glass-card">
+                                <div class="telemetry-header">
+                                    <span>MISSION DATA</span>
+                                    <span class="status-indicator"></span>
+                                </div>
+                                <div class="telemetry-data">
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Sector:</span>
+                                        <span>Punjab, IN</span>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Specialization:</span>
+                                        <span>CSE / AI</span>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Progress:</span>
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="trajectory-node reveal-up">
+                        <div class="node-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="node-content-wrapper">
+                            <div class="node-card glass-card">
+                                <div class="trajectory-date">2023</div>
+                                <h3 class="trajectory-degree">Intermediate (PCM)</h3>
+                                <h4 class="trajectory-inst">Nosegay Public School, Uttarakhand</h4>
+                                <p>Score: <span class="glow-text">82%</span></p>
+                            </div>
+                            <div class="telemetry-panel glass-card">
+                                <div class="telemetry-header">
+                                    <span>ORBITAL LOG</span>
+                                    <span class="status-indicator"></span>
+                                </div>
+                                <div class="telemetry-data">
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Base:</span>
+                                        <span>Uttarakhand</span>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Stream:</span>
+                                        <span>Science (PCM)</span>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Status:</span>
+                                        <span>COMPLETED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="trajectory-node reveal-up">
+                        <div class="node-marker">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="node-content-wrapper">
+                            <div class="node-card glass-card">
+                                <div class="trajectory-date">2021</div>
+                                <h3 class="trajectory-degree">Matriculation</h3>
+                                <h4 class="trajectory-inst">Nosegay Public School, Uttarakhand</h4>
+                                <p>Score: <span class="glow-text">85%</span></p>
+                            </div>
+                            <div class="telemetry-panel glass-card">
+                                <div class="telemetry-header">
+                                    <span>ENTRY VECTOR</span>
+                                    <span class="status-indicator"></span>
+                                </div>
+                                <div class="telemetry-data">
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Foundations:</span>
+                                        <span>Active</span>
+                                    </div>
+                                    <div class="telemetry-item">
+                                        <span class="telemetry-label">Objective:</span>
+                                        <span>Exploration</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="awards-grid mt-5">
+                    <div class="section-header reveal-fade mt-5">
+                        <h3 class="glow-text text-center" style="font-size: 1.5rem; text-align: center; margin-bottom: 2rem;">Acquired Badges</h3>
+                    </div>
+                    <div class="certificates-grid reveal-up">
+                        <!-- Certificate 1: Java & DSA -->
+                        <div class="cert-card glass-card" data-aos="fade-up">
+                            <div class="cert-header">
+                                <div class="cert-issuer-pill">CIPHER SCHOOLS</div>
+                                <div class="cert-thumb">
+                                    <img src="{{ url_for('static', filename='img/certificates/java_dsa.png') }}" alt="Java DSA Certificate">
+                                    <div class="thumb-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="cert-body">
+                                <h3 class="cert-title">Data Structures and Algorithms</h3>
+                                <div class="cert-date"><i class="far fa-calendar-alt"></i> JULY 2025</div>
+                                <p class="cert-desc">Comprehensive training in Java-based DSA, problem-solving, and algorithmic optimization.</p>
+                                <div class="cert-tags">
+                                    <span>#JAVA</span>
+                                    <span>#DSA</span>
+                                </div>
+                            </div>
+                            <div class="cert-footer">
+                                <a href="https://rohit-danu-java-dsa.tiiny.site" target="_blank" class="btn-verify">
+                                    VERIFY_LICENSE <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificate 2: R Programming -->
+                        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="cert-header">
+                                <div class="cert-issuer-pill">BOARD INFINITY</div>
+                                <div class="cert-thumb">
+                                    <img src="{{ url_for('static', filename='img/certificates/r_prog.png') }}" alt="R Programming Certificate">
+                                    <div class="thumb-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="cert-body">
+                                <h3 class="cert-title">R Programming for Data Science</h3>
+                                <div class="cert-date"><i class="far fa-calendar-alt"></i> FEB 2024</div>
+                                <p class="cert-desc">Successfully completed micro-learning course in R Programming fundamentals and data analysis.</p>
+                                <div class="cert-tags">
+                                    <span>#R_PROG</span>
+                                    <span>#DATA_SCIENCE</span>
+                                </div>
+                            </div>
+                            <div class="cert-footer">
+                                <a href="https://getshared.com/d/9ajXgwcz" target="_blank" class="btn-verify">
+                                    VERIFY_LICENSE <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificate 3: Generative AI -->
+                        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="cert-header">
+                                <div class="cert-issuer-pill">INFOSYS SPRINGBOARD</div>
+                                <div class="cert-thumb">
+                                    <img src="{{ url_for('static', filename='img/certificates/gen_ai.png') }}" alt="Generative AI Certificate">
+                                    <div class="thumb-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="cert-body">
+                                <h3 class="cert-title">Build Generative AI Apps</h3>
+                                <div class="cert-date"><i class="far fa-calendar-alt"></i> AUG 2025</div>
+                                <p class="cert-desc">Training in building GenAI solutions using no-code tools and enterprise LLM frameworks.</p>
+                                <div class="cert-tags">
+                                    <span>#GEN_AI</span>
+                                    <span>#NO_CODE</span>
+                                </div>
+                            </div>
+                            <div class="cert-footer">
+                                <a href="https://like-green-hfpx8h1ltl.edgeone.app/1-8ca5a693-0753-4ce5-98c5-e4a25729862a_page-0001.jpg" target="_blank" class="btn-verify">
+                                    VERIFY_LICENSE <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificate 4: Prompt Engineering -->
+                        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="cert-header">
+                                <div class="cert-issuer-pill">INFOSYS SPRINGBOARD</div>
+                                <div class="cert-thumb">
+                                    <img src="{{ url_for('static', filename='img/certificates/prompt_eng.png') }}" alt="Prompt Engineering Certificate">
+                                    <div class="thumb-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="cert-body">
+                                <h3 class="cert-title">ChatGPT-4 Prompt Engineering</h3>
+                                <div class="cert-date"><i class="far fa-calendar-alt"></i> AUG 2025</div>
+                                <p class="cert-desc">Advanced techniques in LLM prompting, context engineering, and AI productivity.</p>
+                                <div class="cert-tags">
+                                    <span>#LLM</span>
+                                    <span>#PROMPT_ENG</span>
+                                </div>
+                            </div>
+                            <div class="cert-footer">
+                                <a href="https://withered-night-232.linkyhost.com" target="_blank" class="btn-verify">
+                                    VERIFY_LICENSE <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rocket-warp-container" data-target="#multiverse">
+                <div class="rocket-warp">
+                    <div class="rocket-body"><i class="fas fa-rocket"></i></div>
+                    <div class="rocket-flame"></div>
+                </div>
+                <span class="warp-label">Punch it! to the Multiverse</span>
+            </div>
+        </section>
+
+        <!-- Multiverse Section: Hobby Planetarium (Hidden Secret) -->
+        <section id="multiverse" class="multiverse section-padding nebula-bg-2" style="display: none; min-height: 100vh;">
+            <div class="container">
+                <div class="section-header reveal-fade">
+                    <h2 class="section-title">05. <span class="hologram-text" data-text="The Multiverse">The Multiverse</span></h2>
+                    <p class="section-subtitle">You have transcended space-time</p>
+                </div>
+                <div class="multiverse-content glass-card p-5 text-center reveal-up">
+                    <i class="fas fa-infinity cosmic-icon-large mb-4" style="font-size: 5rem; color: var(--accent-purple);"></i>
+                    <h3>Welcome to the Null-Space, Commander.</h3>
+                    <p class="lead">Here, your physical and mental disciplines converge in the cosmic stream.</p>
+                    
+                    <div class="multiverse-planetarium-wrapper">
+                        <!-- Left HUD: Stellar Forge -->
+                        <div class="hud-panel hud-left" data-aos="fade-right">
+                            <div class="hud-header">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>TERMINAL_01: STELLAR_FORGE</span>
+                            </div>
+                            <div class="hud-body">
+                                <p class="hud-desc italic">"High-gravity training center for peak physical condition. Gravity optimized at 2.5G."</p>
+                                <div class="power-level-container mt-3">
+                                    <div class="power-bar-bg">
+                                        <div class="power-bar-fill" id="powerBar" style="width: 45%;"></div>
+                                    </div>
+                                    <div class="cosmic-stat">TOTAL_POWER: <span id="powerValueHUD">450</span> / 1000</div>
+                                </div>
+                                <button class="btn-console mt-3" onclick="trainForge()">INITIATE_TRAINING_SEQUENCE</button>
+                            </div>
+                        </div>
+
+                        <!-- Central Solar System -->
+                        <div class="solar-system-container">
+                            <div class="solar-system">
+                                <div class="commander-core">
+                                    <div class="core-ping"></div>
+                                    <div class="core-avatar"><i class="fas fa-user-astronaut"></i></div>
+                                    <div class="core-label">COMMANDER_ID: RD1122</div>
+                                </div>
+                                <div class="orbit-path inner-orbit">
+                                    <div class="planet stellar-forge-planet" id="forgePlanet">
+                                        <div class="planet-body"><i class="fas fa-dumbbell"></i></div>
+                                        <div class="planet-label">STELLAR_FORGE</div>
+                                    </div>
+                                </div>
+                                <div class="orbit-path outer-orbit">
+                                    <div class="planet astral-library-planet" id="libraryPlanet">
+                                        <div class="planet-body"><i class="fas fa-scroll"></i></div>
+                                        <div class="planet-label">ASTRAL_LIBRARY</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right HUD: Astral Library -->
+                        <div class="hud-panel hud-right" data-aos="fade-left">
+                            <div class="hud-header">
+                                <i class="fas fa-scroll"></i>
+                                <span>TERMINAL_02: ASTRAL_LIBRARY</span>
+                            </div>
+                            <div class="hud-body">
+                                <p class="hud-desc italic">"Repository of otherworldly chronicles and transcendent tales (Manhwas)."</p>
+                                <div class="manhwa-hologram-list">
+                                    <div class="manhwa-item">
+                                        <span class="m-title">> Eleceed</span>
+                                        <span class="m-desc">Superpowered speed and felines!</span>
+                                    </div>
+                                    <div class="manhwa-item">
+                                        <span class="m-title">> Nano Machine</span>
+                                        <span class="m-desc">System martial arts in Murim.</span>
+                                    </div>
+                                    <div class="manhwa-item">
+                                        <span class="m-title">> Wind Breaker</span>
+                                        <span class="m-desc">Street racing & growth.</span>
+                                    </div>
+                                    <div class="manhwa-item">
+                                        <span class="m-title">> Lookism</span>
+                                        <span class="m-desc">Social hierarchy & power.</span>
+                                    </div>
+                                </div>
+                                <div class="cosmic-stat mt-3">CHAPTERS_ARCHIVED: <span class="accent-purple">12,450+</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 text-center">
+                        <button class="btn btn-primary" onclick="exitMultiverse()">Return to Reality</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section: Space Station Communication Terminal -->
+        <section id="contact" class="contact-terminal-zone section-padding">
+            <div class="container relative">
+                <!-- TERMINAL HEADER -->
+                <div class="section-header reveal-fade" data-aos="fade-down">
+                    <h2 class="section-title">06. <span class="glow-text">Establish Contact</span></h2>
+                    <p class="section-subtitle">ORBITAL COMMUNICATION BAY ACTIVE</p>
+                </div>
+
+                <div class="station-terminal-container glass-card reveal-up" data-aos="zoom-in">
+                    <!-- HUD DECORATIONS -->
+                    <div class="hud-bracket-tl"></div>
+                    <div class="hud-bracket-tr"></div>
+                    <div class="hud-bracket-bl"></div>
+                    <div class="hud-bracket-br"></div>
+                    <div class="terminal-scanline"></div>
+
+                    <div class="terminal-layout">
+                        <!-- LEFT: MISSION CONTROL STATUS -->
+                        <div class="terminal-status-panel">
+                            <div class="status-header">
+                                <div class="status-indicator">
+                                    <div class="status-dot online pulse"></div>
+                                    <span>STATUS: ONLINE</span>
+                                </div>
+                                <div class="signal-strength">
+                                    <div class="signal-label">SIGNAL</div>
+                                    <div class="signal-bars">
+                                        <div class="bar s-1 active"></div>
+                                        <div class="bar s-2 active"></div>
+                                        <div class="bar s-3 active"></div>
+                                        <div class="bar s-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="station-briefing">
+                                <h3 class="terminal-greet">Station Reception</h3>
+                                <p class="terminal-desc">Mission Control is listening. Dock at the terminal and transmit your payload for immediate uplink.</p>
+                            </div>
+
+                            <div class="contact-modules">
+                                <div class="contact-module glass-card" data-aos="fade-right" data-aos-delay="100">
+                                    <div class="module-icon"><i class="fas fa-satellite-dish"></i></div>
+                                    <div class="module-data">
+                                        <label>Uplink Frequency (Email)</label>
+                                        <a href="mailto:rohitsinghdanu1122@gmail.com">rohitsinghdanu1122@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-module glass-card" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="module-icon"><i class="fas fa-broadcast-tower"></i></div>
+                                    <div class="module-data">
+                                        <label>Emergency Channel (Phone)</label>
+                                        <a href="tel:8630487038">8630487038</a>
+                                    </div>
+                                </div>
+                                <div class="contact-module glass-card" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="module-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="module-data">
+                                        <label>Orbital Coordinates (Location)</label>
+                                        <span>Uttarakhand / Punjab, India</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MINI RADAR UI -->
+                            <div class="mini-radar">
+                                <div class="radar-circle">
+                                    <div class="radar-sweep"></div>
+                                    <div class="radar-ping"></div>
+                                </div>
+                                <div class="radar-coords">LAT: 30.7333 / LONG: 76.7794</div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT: TRANSMISSION CONSOLE -->
+                        <div class="transmission-console">
+                            <form id="contactForm" class="terminal-form">
+                                <div class="console-header">
+                                    <div class="console-title"><i class="fas fa-terminal"></i> SECURE_UPLINK_CONSOLE</div>
+                                    <div class="console-telemetry">>_ WAITING_FOR_PAYLOAD</div>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="terminal-input-group">
+                                        <label>COMMANDER_ID</label>
+                                        <input type="text" id="name" required placeholder="Enter ID...">
+                                        <div class="focus-bar"></div>
+                                    </div>
+                                    <div class="terminal-input-group">
+                                        <label>RETURN_FREQUENCY</label>
+                                        <input type="email" id="email" required placeholder="name@domain.com">
+                                        <div class="focus-bar"></div>
+                                    </div>
+                                    <div class="terminal-input-group full-width">
+                                        <label>TRANSMISSION_PAYLOAD</label>
+                                        <textarea id="message" rows="5" required placeholder="Enter message log..."></textarea>
+                                        <div class="focus-bar"></div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-uplink">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-content">
+                                        INITIATE_UPLINK <i class="fas fa-rocket"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- THE SINGULARITY: PORTFOLIO FINALE -->
+    <section id="singularity" class="singularity-zone section-padding">
+        <div class="container text-center">
+            <div class="singularity-header reveal-fade">
+                <h2 class="section-title">07. <span class="glow-text">The Singularity</span></h2>
+                <p class="section-subtitle">WARNING: PROXIMITY TO ANOMALY DETECTED</p>
+            </div>
+            
+            <div class="black-hole-container">
+                <canvas id="blackHoleCanvas"></canvas>
+                <div class="singularity-warning">
+                    <div class="terminal-quote anomaly-alert-bottom" data-aos="fade-up">
+                        <span class="quote-prefix">> </span>
+                        "Any sufficiently advanced technology is indistinguishable from magic." — Arthur C. Clarke
+                    </div>
+                    <div class="warning-text">SINGULARITY_REACHED // END_OF_TRANSMISSION</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM OVERLAYS -->
+    <div id="corruptionOverlay" class="corruption-overlay">
+        <div class="corrupted-content">
+            <div class="error-code">ERROR: 0x000_SINGULARITY_COLLAPSE</div>
+            <h1 class="glitch-text" data-text="UNIVERSE_CORRUPTED">UNIVERSE_CORRUPTED</h1>
+            <div class="telemetry-log">
+                <p>> SIGNAL TERMINATED...</p>
+                <p>> REALITY BUFFER OVERFLOW...</p>
+                <p>> CORE DATA COMPRESSED INTO SINGULARITY...</p>
+                <p>> RECOVERY PROTOCOL REQUIRED...</p>
+            </div>
+        </div>
+        
+        <!-- RESCUE SHIP: APPEARS AFTER COLLAPSE -->
+        <div id="rescueShip" class="rescue-ship">
+            <div class="ship-body">
+                <i class="fas fa-rocket"></i>
+                <div class="ship-glow"></div>
+            </div>
+            <div class="recovery-label">INITIATE RECONSTRUCTION</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">RD<span class="glow-text">.</span></div>
+                <div class="footer-socials">
+                    <a href="https://github.com/Rohit11danu" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Rohit Singh Danu. Orbiting the internet.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top rocket -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-rocket"></i>
+    </a>
+
+    <!-- Custom hidden easter egg message -->
+    <div id="easter-egg" class="easter-egg-modal">
+        <div class="glass-card easter-egg-content">
+            <h3>Telescope Locked! 🔭</h3>
+            <p>You found the hidden stellar message! "Keep reaching for the stars, because even if you miss, you'll land among the arrays." 🚀</p>
+            <button id="close-easter-egg" class="btn btn-outline">Close Logs</button>
+        </div>
+    </div>
+
+    <!-- GSAP for Singularity Finale -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- JavaScript Link -->
+    <script src="{{ url_for('static', filename='js/script.js') }}?v=1.2"></script>
+</body>
+</html>
